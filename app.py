@@ -4,11 +4,13 @@ import os
 from bson.objectid import ObjectId
 from datetime import datetime, timedelta
 
+
 # Carrega as variáveis de ambiente do arquivo .cred (se disponível)
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.getenv("MONGO_URI", "mongodb+srv://admin:admin@progeficaz.z7ujs.mongodb.net/aps_3")
 mongo = PyMongo(app)
+
 
 
 # Este é um exemplo simples sem grandes tratamentos de dados
